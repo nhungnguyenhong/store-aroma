@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import classes from "./About.css";
+import "./About.css";
 import Title from "../Title/Title";
 export default class About extends Component {
   render() {
     return (
-      <div className={classes.Container}>
+      <div className="Container">
         <Title name="チーム 5 "/>
-          <table>
+          <table className="table">
               <tr>
                   <th>名前</th>
                   <th>学籍番号</th>

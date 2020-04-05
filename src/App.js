@@ -1,12 +1,27 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from "react";
+import { Switch, Route } from "react-router-dom";
+import classes from "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      123
-    </div>
-  );
+import Default from "./components/Default/Default";
+import About from "./components/About/About";
+import Navbar from "./components/Navigation/Navbar/Navbar";
+
+
+
+class App extends Component {
+
+    render() {
+        return (
+            <div className={classes.App}>
+                <div className={classes.Container}>
+                    <Navbar />
+                    <Switch>
+                        <Route path="/About" component={About} />
+                        <Route component={Default} />
+                    </Switch>
+                </div>
+            </div>
+        );
+    }
 }
-
 export default App;
