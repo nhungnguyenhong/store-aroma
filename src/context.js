@@ -54,6 +54,75 @@ class ProductProvider extends Component {
       }
     );
   };
+  increment = id => {
+    let tempCart = [...this.state.cart];
+    const selectedProduct = tempCart.find(item => item.id === id);
+    const index = tempCart.indexOf(selectedProduct);
+    const product = tempCart[index];
+    product.count = product.count + 1;
+    product.total = parseFloat((product.count * product.price).toFixed(2));
+    this.setState(
+      () => {
+        return { cart: [...tempCart] };
+      },
+      () => {
+        this.addTotals();
+      }
+    );
+  };
+  decrement = id => {
+    let tempCart = [...this.state.cart];
+    const selectedProduct = tempCart.find(item => item.id === id);
+    const index = tempCart.indexOf(selectedProduct);
+    const product = tempCart[index];
+    product.count = product.count - 1;
+    if (product.count === 0) {
+      this.removeItem(id);
+    }else{
+
+      product.total = parseFloat((product.count * product.price).toFixed(2));
+      this.setState(
+        () => {
+          return { cart: [...tempCart] };
+        },
+        () => {
+          this.addTotals();
+        }
+      );
+    }
+  };
+  removeItem = id => {
+    let tempProducts = [...this.state.products];
+    let tempCart = [...this.state.cart];
+    tempCart = tempCart.filter(item => item.id !== id);
+    const index = tempProducts.indexOf(this.getItem(id));
+    let removeProduct = tempProducts[index];
+    removeProduct.inCart = false;
+    removeProduct.count = 0;
+    removeProduct.total = 0;
+    this.setState(
+      () => {
+        return {
+          cart: [...tempCart],
+          product: [...tempProducts]
+        };
+      },
+      () => {
+        this.addTotals();
+      }
+    );
+  };
+  addTotals = () => {
+    let subTotal = 0;
+    this.state.cart.map(item => (subTotal += item.total));
+    const tempTax = subTotal * 0.15;
+    const tax = parseFloat(tempTax.toFixed(2));
+    const total = parseFloat((subTotal + tax).toFixed(2));
+    subTotal = parseFloat(subTotal.toFixed(2));
+    this.setState(() => {
+      return { cartSubTotal: subTotal, cartTax: tax, cartTotal: total };
+    });
+  };
 
   render() {
     return (
@@ -62,9 +131,9 @@ class ProductProvider extends Component {
           ...this.state,
           // day la dong handleDetail
           addToCart: this.addToCart,
-          // day la dong openModal/closeModal
-          // dong tang/ giam so luwong sp trong cart
-          //xoa sp, xoa toan bo gio hang
+          increment: this.increment,
+          decrement: this.decrement,
+          removeItem: this.removeItem,
         }}
       >
         {this.props.children}
