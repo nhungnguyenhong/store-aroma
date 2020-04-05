@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import classes from "./Default.css";
+import "./Default.css";
 export default class Default extends Component {
   render() {
     return (
-      <div className={classes.Container}>
+      <div className="Container">
         <h1>404</h1>
         <h1>Error</h1>
         <h2>page not found</h2>
