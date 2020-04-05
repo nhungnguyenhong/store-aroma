@@ -1,19 +1,20 @@
 import React from "react";
 import CartItem from "./../CartItem/CartItem";
 import CartColumns from "./../CartColumns/CartCoulmns";
-import classes from "./CartList.css";
+import  "./CartList.css";
 const CartList = ({ value }) => {
   const { cart } = value;
   return (
     
-      <div className={classes.TabelContainer}>
-        <table className={classes.CartTable}>
+      <div className="TabelContainer">
+        <table className="CartTable">
           <CartColumns />
           {cart.map(item => {
             return <CartItem key={item.id} item={item} value={value} />;
           })}
         </table>
-           
+        <br></br>
+        <hr width="90%"></hr>
       </div>
     
   );

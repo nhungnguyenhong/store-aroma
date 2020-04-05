@@ -4,9 +4,9 @@ import Title from "../Title/Title";
 export default class About extends Component {
   render() {
     return (
-      <div className="Container">
+      <div className="ContainerA">
         <Title name="チーム 5 "/>
-          <table className="table">
+          <table className="tableA">
               <tr>
                   <th>名前</th>
                   <th>学籍番号</th>
@@ -31,6 +31,9 @@ export default class About extends Component {
                   <td>グエン・フォン・アイン</td>
                   <td>20165740</td>
               </tr>
+              <br></br>
+              <br></br>
+              <tr>Link github: https://github.com/nhungnguyenhong/store-aroma</tr>
           </table>
 
       </div>

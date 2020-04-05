@@ -1,4 +1,4 @@
-.Container {
+.ContainerA {
   margin: 5rem 2rem 2rem 2rem;
   background: #ffffff;
   font-family: "Rasa", serif;
@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-.table {
+.tableA {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 60%;

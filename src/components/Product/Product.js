@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import classes from "./Product.css";
+import "./Product.css";
 import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import { ProductConsumer } from "./../../context";
@@ -17,27 +17,27 @@ export default class Product extends Component {
       <ProductConsumer> 
         {value=>(
         
-          <div className={classes.Card}>
-            <NavLink to="/details">
+          <div className="Card">
+            <NavLink to="/Detail">
               <div
-                className={classes.ImgContainer}
-                // onClick={() => value.handleDetail(id)} // 商品の詳細を表示する
+                className="ImgContainer"
+                onClick={() => value.handleDetail(id)} // 商品の詳細を表示する
               >
-                <img src={img} alt={title} className={classes.Img} />
+                <img src={img} alt={title} className="img-product-list" />
               </div>
         
-              <h4 className={classes.Title}>{title}</h4>
+              <h4 className="title-product">{title}</h4>
             </NavLink>
 
-            <span className={classes.Price}>$ {price}</span>
+            <span className="Price">$ {price}</span>
             <button
               disabled={inCart ? true : false}
               onClick={() => {
                 value.addToCart(id); //カートに商品を追加
-                // value.openModal(id); // 商品の小さなウィンドウを開きます
+                value.openModal(id); // 商品の小さなウィンドウを開きます
               }}
 
-              className={inCart ? classes.CartBtnDisable : classes.CartBtn}
+              className={inCart ? "CartBtnDisable" : "CartBtn"}
             >
               {inCart ? <span>in Cart</span> : <span>ADD To CART</span>}
             </button>

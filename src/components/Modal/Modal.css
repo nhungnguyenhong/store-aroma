@@ -1,4 +1,4 @@
-.Container {
+.ContainerM {
   position: fixed;
   top: 50%;
   z-index: 500;
@@ -11,29 +11,29 @@
   color: #00344b;
 }
 
-.ImgContainer {
+.ImgContainerM {
   width: 300px;
   height: 320px;
   margin: 0 auto;
 }
-.Img {
+.ImgM {
   max-width: 100%;
   max-height: 100%;
 }
-.Container > h3,
-.Container > h4 {
+.ContainerM > h3,
+.ContainerM > h4 {
   text-transform: uppercase;
   margin: 0.2rem 0.2rem;
   text-align: center;
 }
-.BtnContainer {
+.BtnContainerM {
   display: flex;
   justify-content: space-around;
   align-content: center;
   flex-wrap: wrap;
 }
-.BackButton,
-.CartBtn {
+.BackButtonM,
+.CartBtnM {
   color: #00344b;
   border: 2px solid #414141;
   width: 10rem;
@@ -46,8 +46,8 @@
   cursor: pointer;
   outline: none;
 }
-.BackButton:hover,
-.CartBtn:hover {
+.BackButtonM:hover,
+.CartBtnM:hover {
   background: #00344b;
   color: white;
 }

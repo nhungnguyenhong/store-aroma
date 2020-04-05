@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./CartItem.css";
+import "./CartItem.css";
 const CartItem = ({ item, value }) => {
   const { id, title, img, price, total, count } = item;
   const { increment, decrement, removeItem } = value;
@@ -15,15 +15,15 @@ const CartItem = ({ item, value }) => {
         </td>
         <td>{title}</td>
         <td>${price}</td>
-        <td className={classes.BtnContainer}>
-          <button onClick={()=>decrement(id)} className={classes.Btn}>
+        <td className="BtnContainer">
+          <button onClick={()=>decrement(id)} className="Btn">
             -
           </button>
-          <span className={classes.BtnSpan}>{count}</span>
-          <button onClick={()=>increment(id)} className={classes.Btn}>+</button>
+          <span className="BtnSpan">{count}</span>
+          <button onClick={()=>increment(id)} className="Btn">+</button>
         </td>
         <td>
-          <button onClick={()=>removeItem(id)} className={classes.RemoveBtn}>X</button>
+          <button onClick={()=>removeItem(id)} className="RemoveBtn">X</button>
         </td>
         <td>${total}</td>
       </tr>

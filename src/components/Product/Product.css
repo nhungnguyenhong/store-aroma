@@ -6,6 +6,8 @@
     grid-template-rows: auto auto 4em;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     border-radius: 2px;
+    float:left;
+    margin-left: 1%
   }
   .Card a {
     text-decoration: none;
@@ -17,7 +19,7 @@
     overflow: hidden;
   }
   
-  .Img {
+  .img-product-list {
     display: block;
     max-width: 250px;
     max-height: 250px;
@@ -25,7 +27,7 @@
     margin-left: auto;
     margin-top: 1rem;
   }
-  .Title {
+  .title-product {
     color: #00344b;
     text-align: center;
     width: 250px;

@@ -3,7 +3,6 @@
 }
 .CartTable {
   width: 100%;
-  border-collapse: collapse;
   margin: 0;
   padding: 0;
   font-family: "Rasa", serif;
@@ -12,13 +11,16 @@
 .CartTable thead {
   text-transform: uppercase;
   text-align: center;
+  border: none;
 }
 .CartTable th {
   width: 10%;
+  border: none
 }
 .CartTable td {
   text-align: center;
   border-bottom: 1px solid #c3c3c3;
+  border: none;
 }
 
 @media only screen and (max-width: 569px) {

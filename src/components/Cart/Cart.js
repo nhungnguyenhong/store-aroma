@@ -3,7 +3,7 @@ import Title from "./../Title/Title";
 import EmptyCart from "./EmptyCart/EmptyCart";
 import CartList from "./CartList/CartList";
 import CartTotal from './CartTotal/CartTotal'
-import classes from "./Cart.css";
+import "./Cart.css";
 import { ProductConsumer } from "./../../context";
 export default class Cart extends Component {
   render() {
@@ -14,7 +14,7 @@ export default class Cart extends Component {
             const { cart } = value;
             if (cart.length > 0) {
               return (
-                <div className={classes.Container}>
+                <div className="container-cart">
                   <Title name="Your Cart" />
                   <CartList value={value} />
                   <CartTotal value={value}/>

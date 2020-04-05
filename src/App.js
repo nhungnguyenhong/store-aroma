@@ -9,15 +9,11 @@ import Default from "./components/Default/Default";
 import About from "./components/About/About";
 import Cart from "./components/Cart/Cart";
 import Modal from "./components/Modal/Modal";
+import Details from "./components/Details/Details";
 
 class App extends Component {
   state = {
     sideDrawerOpen: false
-  };
-  drawerToggleClickHandler = () => {
-    this.setState(prevState => {
-      return { sideDrawerOpen: !prevState.sideDrawerOpen };
-    });
   };
 
   backdropClickHandler = () => {
@@ -28,13 +24,14 @@ class App extends Component {
     return (
       <div className={classes.App}>
         <div className={classes.Container}>
-          <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
+          <Navbar />
           {this.state.sideDrawerOpen ? (
             <BackDrop click={this.backdropClickHandler} />
           ) : null}
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/shop" component={ProductList} />
+            <Route path="/detail" component={Details} />
             <Route path="/About" component={About} />
             <Route path="/cart" component={Cart} />
             <Route component={Default} />

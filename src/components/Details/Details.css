@@ -1,4 +1,4 @@
-.Container {
+.Containerd {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-template-rows: minmax(80vh,1fr);
@@ -10,11 +10,11 @@
   height: 550px;
 }
 @media only screen and (max-width:450px){
-  .Container{
+  .Containerd{
     margin: 5rem 0 0 0;
   }
 }
-.ImgContainer {
+.ImgContainerd {
  /* margin-top: 50px;*/
   border-right: 1px solid black;
   object-fit: cover;
@@ -23,11 +23,11 @@
   justify-self: center;
 }
 @media only screen and (max-width:450px){
-  .ImgContainer {
+  .ImgContainerd {
     width: 100%;
   }
 }
-.Img {
+.Imgd {
   display: inline-block;
   max-width: 400px;
   max-height: 500px;
@@ -37,7 +37,7 @@
   color: #00344b;
   margin: 2rem;
 }
-.Title {
+.Titled {
   font-size: 2rem;
   margin: auto;
 }

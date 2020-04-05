@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import Title from "./../Title/Title";
 import Product from "../Product/Product";
-import classes from "./ProductList.css";
+import "./ProductList.css";
 import { ProductConsumer } from "./../../context";
 export default class ProductList extends Component {
 
   render() {
     return (
-      <div className={classes.PageContainer}>
+      <div className="PageContainer">
         <Title name="Suitcase" />
-        <div className ={classes.ProductContainer}>
+        <div className ="ProductContainer">
 
           <ProductConsumer>
             {(value)=>{

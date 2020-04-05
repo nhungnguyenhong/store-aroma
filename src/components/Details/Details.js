@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { ProductConsumer } from "./../../context";
 import { NavLink } from "react-router-dom";
-import classes from "./Details.css";
+import "./Details.css";
 export default class Details extends Component {
   render() {
     return (
@@ -17,21 +17,21 @@ export default class Details extends Component {
             inCart
           } = value.detailProduct;
           return (
-            <div className={classes.Container}>
-              <div className={classes.ImgContainer}>
-                <img src={img} alt={title} className={classes.Img} />
+            <div className="Containerd">
+              <div className="ImgContainerd">
+                <img src={img} alt={title} className="Imgd" />
               </div>
-              <div className={classes.InfoContainer}>
-                <h1 className={classes.Title}>{title}</h1>
+              <div className="InfoContainer">
+                <h1 className="Titled">{title}</h1>
                 <h3>Made by: {company}</h3>
                 <p>
                   <strong>Description: </strong>
                   {info}
                 </p>
                 <h2>Price: $ {price}</h2>
-                <div className={classes.BtnContainer}>
+                <div className="BtnContainer">
                   <NavLink to="/shop">
-                    <button className={classes.BackButton}>Back to Shop</button>
+                    <button className="BackButton">Back to Shop</button>
                   </NavLink>
                   <button
                     disabled={inCart ? true : false}
@@ -40,7 +40,7 @@ export default class Details extends Component {
                       value.openModal(id);
                     }}
                     className={
-                      inCart ? classes.CartBtnDisable : classes.CartBtn
+                      inCart ? "CartBtnDisable" : "CartBtn"
                     }
                   >
                     {inCart ? <span>in Cart</span> : <span>ADD To CART</span>}

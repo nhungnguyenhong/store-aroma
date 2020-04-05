@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from "./CartTotal.css";
+import "./CartTotal.css";
 
 export default function CartTotals({value}) {
     const {cartSubTotal, cartTax, cartTotal} = value;
@@ -8,7 +8,7 @@ export default function CartTotals({value}) {
         <div className="container">
             <div className="row">
                 <div>
-                    <h4 className={classes.totalAll}>
+                    <h4 className="totalAll">
                         <span >
                             Subtotal:
                             ${cartSubTotal}
@@ -25,6 +25,7 @@ export default function CartTotals({value}) {
                         </span>
                     </h4>
                 </div>
+                <br></br>
             </div>
         </div>
     </React.Fragment>
