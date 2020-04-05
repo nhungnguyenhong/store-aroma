@@ -21,7 +21,7 @@ export default class Product extends Component {
             <NavLink to="/details">
               <div
                 className={classes.ImgContainer}
-                // onClick={() => value.handleDetail(id)} // 商品の詳細を表示する
+                onClick={() => value.handleDetail(id)} // 商品の詳細を表示する
               >
                 <img src={img} alt={title} className={classes.Img} />
               </div>
