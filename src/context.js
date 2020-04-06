@@ -29,7 +29,12 @@ class ProductProvider extends Component {
       return { products };
     });
   };
-  
+  handleDetail = id => {
+    const product = this.getItem(id);
+    this.setState(() => {
+      return { detailProduct: product };
+    });
+  };
   
   getItem = id => { //IDによってプロダクトをとる
     const product = this.state.products.find(item => item.id === id);
@@ -146,7 +151,7 @@ class ProductProvider extends Component {
       <ProductContext.Provider
         value={{
           ...this.state,
-          // day la dong handleDetail
+          handleDetail: this.handleDetail,
           addToCart: this.addToCart,
           increment: this.increment,
           decrement: this.decrement,
